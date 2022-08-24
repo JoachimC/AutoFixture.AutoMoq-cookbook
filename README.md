@@ -527,3 +527,12 @@ public void WHEN_calculateForOrder_THEN_delegate_to_external_calculator(
     result.Should().Be(expectedTaxAmount);
 }
 ```
+
+## Allergy Warnings
+
+* **complex object trees:** can be expensive (take a long time) to auto generate. 
+* **looping/recusive object trees:** can be handled but will need help. The specific solution will depend on the object tree and how it is expected to be populated - check the `AutoFixture` documentation.
+
+## Food For Thought
+
+* [TDD, Where Did It All Go Wrong (Ian Cooper)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
