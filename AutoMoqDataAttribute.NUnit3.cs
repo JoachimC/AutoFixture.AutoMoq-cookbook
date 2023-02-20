@@ -24,6 +24,7 @@ public static class FixtureFactory
         fixture.Customizations.Add(new DateOnlySpecimenBuilder());
         fixture.Customizations.Add(new TimeOnlySpecimenBuilder());
         fixture.Customize(new AutoMoqCustomization { GenerateDelegates = true });
+        fixture.Register(() => new MockHttpMessageHandler());
         fixture.Register(
             (MockHttpMessageHandler mockHttpHandler, Uri baseAddress) =>
             {
