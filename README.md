@@ -530,7 +530,7 @@ public void WHEN_calculateForOrder_THEN_delegate_to_external_calculator(
 
 ## Allergy Warnings
 
-* **complex object trees:** can be expensive (take a long time) to auto generate. 
+* **complex object trees:** can be expensive (take a long time) to auto generate. Note: Perfomance can be improved by registering custom `ISpecimenBuilder`s for key parts of the complex object tree - starting with the root. (I will write some examples of this in the near future)
 * **looping/recusive object trees:** can be handled but will need help. The specific solution will depend on the object tree and how it is expected to be populated - check the `AutoFixture` documentation.
 
 ## Food For Thought
